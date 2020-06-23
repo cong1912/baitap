@@ -40,5 +40,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/news/{id}/edit', 'NewsController@edit')->name('news.edit');
     Route::put('/news/{id}', 'NewsController@update')->name('news.update');
     Route::delete('/news/{id}/delete', 'NewsController@destroy')->name('news.destroy');
+    Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 });
 
